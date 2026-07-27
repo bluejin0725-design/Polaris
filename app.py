@@ -1,9 +1,15 @@
 import streamlit as st
 
-#페이지 제목 설정
+st.title('두 숫자 더하기 앱')
 
-st.title('hello')
+# 사용자로부터 첫 번째 숫자 입력 받기
+num1 = st.number_input('첫 번째 숫자를 입력하세요', value=0.0)
 
-#텍스트 출력
-st.write('이것은 streamlit으로 만든 앱 어플리케이션 입니다.')
-st.write('다음주 수요일에 만나요')
+# 사용자로부터 두 번째 숫자 입력 받기
+num2 = st.number_input('두 번째 숫자를 입력하세요', value=0.0)
+
+# 두 숫자를 더하기
+sum_result = num1 + num2
+
+# 결과 출력
+st.write(f'두 숫자의 합은: {sum_result}')
